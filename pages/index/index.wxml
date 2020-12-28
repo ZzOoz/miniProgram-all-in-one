@@ -1,0 +1,28 @@
+<!-- 瀑布流展示 -->
+<view class="main">
+  <!-- 遍历两次 第一次是columns两列的遍历 第二次是对里面的数据进行遍历 -->
+  <view wx:if="{{ columns }}" wx:for="{{ columns }}" class="column">
+    <view wx:for="{{ item }}" wx:for-item="pics" class="column_item">
+      <image src="{{ pics.pic }}" class="column_pic" mode="widthFix" />
+      <view class="content">
+        这么漂亮的幼儿园不来吗这么漂亮的幼儿园不来吗这么漂亮的幼儿园不来吗这么漂亮的幼儿园不来吗
+      </view>
+      <view class="desc">
+        <view class="left">
+          <image src="/assets/imgs/defaultAvatar.png" />
+          <text>青藤</text>
+        </view>
+        <view class="right">
+          <image src="/assets/imgs/defaultAvatar.png" />
+          <text>999+</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 这是一个隐藏的view标签 用于加载数据并且获取图片最合适的尺寸大小 -->
+<view class="hide">
+  <!-- 在图片中处理加载时候和加载失败时候的情况 -->
+  <image wx:for="{{ tempPics }}" src="{{ item.pic }}" bindload="loadPic" binderror="loadErrorPic" data-index="{{ index }}"/>
+</view>
