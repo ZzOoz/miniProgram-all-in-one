@@ -30,7 +30,7 @@ Page({
     const that = this
     console.log(that.jsData.isLoading,'isLoading')
     if (!that.jsData.isLoading) {
-      // wx.showLoading()
+      wx.showLoading()
       this.jsData.isLoading = true // 显示加载中
       setTimeout(() => {
         const pics = []

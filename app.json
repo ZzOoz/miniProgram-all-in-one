@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/generationPoster/generationPoster",
     "pages/logs/logs",
-    "pages/add/add"
+    "pages/add/add",
+    "pages/swipeLeft/swipeLeft"
   ],
   "window": {
     "backgroundTextStyle": "light",
